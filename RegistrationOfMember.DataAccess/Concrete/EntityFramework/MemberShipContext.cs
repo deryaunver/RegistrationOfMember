@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RegistrationOfMember.DataAccess.Concrete.EntityFramework.Mappings;
 using RegistrationOfMember.Entities.Concrete;
 
 namespace RegistrationOfMember.DataAccess.Concrete.EntityFramework

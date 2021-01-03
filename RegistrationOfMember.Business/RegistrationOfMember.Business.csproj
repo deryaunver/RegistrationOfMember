@@ -45,7 +45,9 @@
     <Compile Include="Concrete\MemberManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevFramework.Core\DevFramework.Core.csproj">
       <Project>{93C91DD3-067E-4806-A7FF-F8F9B3E570D7}</Project>
