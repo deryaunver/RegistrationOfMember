@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DevFramework.Core\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="FluentNHibernate">
       <HintPath>..\DevFramework.Core\bin\Debug\FluentNHibernate.dll</HintPath>
     </Reference>
@@ -45,11 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IMemberDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfMemberDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\MemberMap.cs" />
+    <Compile Include="Concrete\EntityFramework\MemberShipContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Concrete\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DevFramework.Core\DevFramework.Core.csproj">
       <Project>{93C91DD3-067E-4806-A7FF-F8F9B3E570D7}</Project>
