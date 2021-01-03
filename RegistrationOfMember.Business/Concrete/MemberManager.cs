@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevFramework.Core.Aspects.Postsharp.LogAspects;
 using DevFramework.Core.Aspects.Postsharp.ValidationAspects;
+using DevFramework.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 using RegistrationOfMember.Business.Abstract;
 using RegistrationOfMember.Business.ServiceAdapters.Abstract;
 using RegistrationOfMember.Business.ValidationRules.FluentValidation;
@@ -23,6 +25,8 @@ namespace RegistrationOfMember.Business.Concrete
             _kpsService = kpsService;
         }
         [FluentValidationAspect(typeof(MemberValidator))]
+        //[LogAspect(typeof(DatabaseLogger))]
+        
         public void Add(Member member)
         {
             CheckIfMemberExists(member);
