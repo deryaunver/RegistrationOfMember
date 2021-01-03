@@ -25,6 +25,10 @@ namespace RegistrationOfMember.Business.Concrete
         [FluentValidationAspect(typeof(MemberValidator))]
         public void Add(Member member)
         {
+            if (_memberDal.Get(m=>m.TcNo==member.TcNo)!=null)
+            {
+                throw  new Exception("Bu Kullanıcı Sisteme Daha Önce Kayıt Olmuştur.");
+            }
             if (_kpsService.ValidateUser(member) == false)
             {
                 throw new Exception("Kimlik Doğrulamadı!");
