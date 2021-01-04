@@ -13,12 +13,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
-    <title>Checkout example · Bootstrap v5.0</title>
+    <title>WAMP COMPANY · Bootstrap v5.0</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
-
-
-
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
@@ -57,32 +57,33 @@
                      <div class="row g-3">
                          <div class="col-sm-6">
                              <label for="firstName" class="form-label">Ad</label>
-                             <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="">
+                             @Html.TextBoxFor(m => m.Member.FirstName, new { @class = "form-control" })
+                             @Html.ValidationMessageFor(model => model.Member.FirstName, "", new { @class = "text-danger" })
                          </div>
 
                          <div class="col-sm-6">
                              <label for="lastName" class="form-label">Soyad</label>
-                             <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="">
+                             @Html.TextBoxFor(m => m.Member.LastName, new { @class = "form-control" })
+                             @Html.ValidationMessageFor(model => model.Member.LastName, "", new { @class = "text-danger" })
 
                          </div>
 
                          <div class="col-12">
                              <label for="tcNo" class="form-label">Tc Kimlik Numarası</label>
-                             <div class="input-group">
-                                 <span class="input-group-text"></span>
-                                 <input type="text" class="form-control" id="tcNo" name="tcNo" placeholder="Tc Kimlik Numarası">
-
-                             </div>
+                             @Html.TextBoxFor(m => m.Member.TcNo, new { @class = "form-control" })
+                             @Html.ValidationMessageFor(model => model.Member.TcNo, "", new { @class = "text-danger" })
                          </div>
 
                          <div class="col-12">
                              <label for="email" class="form-label">Email </label>
-                             <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+                             @Html.TextBoxFor(m => m.Member.Email, new { @class = "form-control" })
+                             @Html.ValidationMessageFor(model => model.Member.Email, "", new { @class = "text-danger" })
                          </div>
 
                          <div class="col-12">
                              <label for="dateOfBirth" class="form-label">Doğum Tarihiniz</label>
-                             <input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder="04/03/1993">
+                             @Html.TextBoxFor(m => m.Member.DateOfBirth, new { @class = "form-control" })
+                             @Html.ValidationMessageFor(model => model.Member.DateOfBirth, "", new { @class = "text-danger" })
 
                          </div>
 
@@ -99,7 +100,7 @@
         </main>
 
         <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">&copy;&clubs; 1987–2021 MFC Company </p>
+            <p class="mb-1">&copy; 1994–2021 WAMP Company </p>
 
         </footer>
     </div>

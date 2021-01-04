@@ -12,13 +12,13 @@ namespace RegistrationOfMember.Business.ValidationRules.FluentValidation
     {
         public MemberValidator()
         {
-            RuleFor(m => m.FirstName).NotEmpty();
+            RuleFor(m => m.FirstName).NotEmpty().WithMessage("'Ad' alanı BOŞ GEÇİLEMEZ");
             RuleFor(m => m.LastName).NotEmpty();
             RuleFor(m => m.TcNo).Length(11).NotEmpty();
             RuleFor(m => m.Email).EmailAddress().NotEmpty();
             RuleFor(m => m.DateOfBirth).LessThan(DateTime.Now).NotEmpty();
-         
 
+       
         }
     }
 }
