@@ -12,11 +12,11 @@ namespace RegistrationOfMember.Business.ValidationRules.FluentValidation
     {
         public MemberValidator()
         {
-            RuleFor(m => m.FirstName).NotEmpty().WithMessage("'Ad' alanı BOŞ GEÇİLEMEZ");
-            RuleFor(m => m.LastName).NotEmpty();
-            RuleFor(m => m.TcNo).Length(11).NotEmpty();
-            RuleFor(m => m.Email).EmailAddress().NotEmpty();
-            RuleFor(m => m.DateOfBirth).LessThan(DateTime.Now).NotEmpty();
+            RuleFor(m => m.FirstName).NotEmpty().WithMessage("'Ad' alanı boş olmamalı.");
+            RuleFor(m => m.LastName).NotEmpty().WithMessage("'Soyad' alanı boş olmamalı."); ;
+            RuleFor(m => m.TcNo).Length(11).NotEmpty().WithMessage("'TC kimlik numarası' alanı boş olmamalı."); ;
+            RuleFor(m => m.Email).EmailAddress().NotEmpty().WithMessage("'Email' alanı boş olmamalı."); ;
+            RuleFor(m => m.DateOfBirth).LessThan(DateTime.Now).NotEmpty().WithMessage("'Doğum Tarihi' alanı boş olmamalı."); ;
 
        
         }
