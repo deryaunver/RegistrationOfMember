@@ -1,0 +1,107 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Checkout example · Bootstrap v5.0</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+                <h2>Kayıt Formu</h2>
+                <p class="lead">Lütfen bilginilerinizi giriniz.</p>
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-md-12 order-md-1">
+                    <h4 class="mb-3">Kullanıcı Bilgileri</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">Ad</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="">
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Soyad</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="">
+
+                            </div>
+
+                            <div class="col-12">
+                                <label for="tcNo" class="form-label">Tc Kimlik Numarası</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"></span>
+                                    <input type="text" class="form-control" id="tcNo" name="tcNo" placeholder="Tc Kimlik Numarası">
+
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email </label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+                            </div>
+
+                            <div class="col-12">
+                                <label for="dateOfBirth" class="form-label">Doğum Tarihiniz</label>
+                                <input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" placeholder="04/03/1993">
+
+                            </div>
+
+                        </div>
+
+                        <br />
+
+
+
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">Kayıt Ol</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy;&clubs; 1987–2021 MFC Company </p>
+
+        </footer>
+    </div>
+
+</body>
+</html>
