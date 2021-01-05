@@ -9,5 +9,6 @@ namespace RegistrationOfMember.MvcWebUI.Models
     public class MemberAddViewModel
     {
         public Member Member { get; set; }
+        
     }
 }

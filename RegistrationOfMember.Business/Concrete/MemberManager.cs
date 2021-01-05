@@ -25,7 +25,7 @@ namespace RegistrationOfMember.Business.Concrete
             _kpsService = kpsService;
         }
         [FluentValidationAspect(typeof(MemberValidator))]
-        //[LogAspect(typeof(DatabaseLogger))]
+        [LogAspect(typeof(DatabaseLogger))]
         
         public void Add(Member member)
         {
